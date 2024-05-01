@@ -9,19 +9,30 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "13.5.6"
+    "flowbite": "^2.0.0",
+    "flowbite-react": "^0.6.4",
+    "framer-motion": "^10.16.4",
+    "next": "^14.0.2",
+    "node-sass": "^9.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
+    "react-intersection-observer": "^9.5.3",
+    "react-multi-carousel": "^2.8.4",
+    "react-responsive-carousel": "^3.2.23",
+    "sharp": "^0.32.6",
+    "swiper": "^11.0.3",
+    "tailwindcss-transitions": "^2.2.0"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "^18.2.34",
+    "@types/react-dom": "^18.2.14",
     "autoprefixer": "^10",
-    "postcss": "^8",
-    "tailwindcss": "^3",
     "eslint": "^8",
-    "eslint-config-next": "13.5.6"
+    "eslint-config-next": "^14.0.2",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2"
   }
 }
