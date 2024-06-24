@@ -19,8 +19,8 @@ const OurProjectsCard: React.FC<Props> = ({ companyName, companyLogo }) => {
       </div>
       <div className='overflow-hidden'>
         <div className='w-auto flex gap-x-7 animate-infinite-scroll cursor-grab hover:animate-pause'>
-          {items.map((item) => (
-            <div className="w-96 h-80 bg-red-500 text-2xl flex-shrink-0 rounded-2xl overflow-hidden shadow-2xl">
+          {items.map((value, index) => (
+            <div key={index} className="w-96 h-80 bg-red-500 text-2xl flex-shrink-0 rounded-2xl overflow-hidden shadow-2xl">
               <div className='w-96 h-80 object-cover bg-red-500 overflow-hidden rounded-2xl hover:scale-95 transform transition-transform duration-300'>
                 <Image src={companyLogo} alt='Name' className='object-cover' />
               </div>

@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import { BsFacebook } from 'react-icons/bs'
 
 const FooterWhite: React.FC = () => {
-  const { color, colorIndex, setColorIndex } = useContext(StyleContext)
+  const { color, colorIndex, setColorIndex } : any = useContext(StyleContext)
 
   return (
     <div className='bg-white w-full h-[570px] rounded-t-3xl px-8'>
