@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import internship from '@/assets/images/internships 2.png'
+import internship from '@/public/images/internships 2.png'
 import { useInView } from 'react-intersection-observer'
 
 const TestimonialCard:React.FC = () => {

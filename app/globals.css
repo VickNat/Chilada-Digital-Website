@@ -13,7 +13,7 @@
 }
 
 .headingStyle {
-  @apply uppercase font-heading text-white font-extrabold md:text-6xl text-4xl;
+  @apply uppercase font-heading text-white font-extrabold md:text-5xl text-4xl;
 }
 
 @keyframes slideIn {

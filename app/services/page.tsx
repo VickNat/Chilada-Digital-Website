@@ -1,16 +1,59 @@
-import React from 'react'
-import Image from 'next/image'
-import internship from '@/assets/images/internships 2.png'
-import logo1 from '@/assets/logos/Chilada logo 1 3.svg'
-import ServiceCard from '../components/ServiceCard'
+'use client'
 
-const page = () => {
+import React, { useContext } from 'react'
+import Image from 'next/image'
+import internship from '@/public/images/internships 2.png'
+import logo1 from '@/public/logos/Chilada logo 1 3.svg'
+import ServiceCard from '../components/ServiceCard'
+import { StyleContext } from '@/lib/StyleContext'
+
+const Page = () => {
+  const { theme, themeIndex, setThemeIndex } = useContext(StyleContext)
+  const services = [
+    {
+      id: 1,
+      title: "Digital Marketing",
+      description: "We provide digital marketing services to help you grow your business.",
+      image: logo1
+    },
+    {
+      id: 2,
+      title: "Social Media Marketing",
+      description: "We provide social media marketing services to help you grow your business.",
+      image: logo1
+    },
+    {
+      id: 3,
+      title: "Web Development",
+      description: "We provide web development services to help you grow your business.",
+      image: logo1
+    },
+    {
+      id: 4,
+      title: "SEO",
+      description: "We provide SEO services to help you grow your business.",
+      image: logo1
+    },
+    {
+      id: 5,
+      title: "Content Creation",
+      description: "We provide content creation services to help you grow your business.",
+      image: logo1
+    },
+    {
+      id: 6,
+      title: "Branding",
+      description: "We provide branding services to help you grow your business.",
+      image: logo1
+    },
+  ]
+
   return (
     <div className='bg-white mt-24 pb-24'>
-      <div className='h-96 w-full bg-chiladaBlue-100 relative overflow-hidden'>
+      <div className={`h-96 w-full bg-${theme.primaryColor} relative overflow-hidden`}>
         <div className="absolute inset-0">
           <Image src={internship} alt='Internship' className='h-full w-full object-cover mix-blend-overlay' />
-          <div className={`absolute inset-0 bg-chiladaBlue-100 opacity-50`}></div>
+          <div className={`absolute inset-0 bg-${theme.primaryColor} opacity-50`}></div>
         </div>
         <div className='relative flex justify-center items-center mt-36'>
           <h1 className='headingStyle'>our services</h1>
@@ -19,16 +62,13 @@ const page = () => {
 
       <div className="flex justify-center items-center min-h-screen my-20">
         <div className="grid grid-cols-3 gap-16">
-          <div className="card flex justify-center items-center"><ServiceCard /></div>
-          <div className="card flex justify-center items-center"><ServiceCard /></div>
-          <div className="card flex justify-center items-center"><ServiceCard /></div>
-          <div className="card flex justify-center items-center"><ServiceCard /></div>
-          <div className="card flex justify-center items-center"><ServiceCard /></div>
-          <div className="card flex justify-center items-center"><ServiceCard /></div>
+          {services.map((service) => (
+            <ServiceCard key={service.id} service={service} />
+          ))}
         </div>
       </div>
 
-      <div className='h-[551px] bg-chiladaBlue-100 my-36 flex flex-col justify-start pt-10 items-center gap-8'>
+      {/* <div className='h-[551px] bg-${theme.primaryColor} my-36 flex flex-col justify-start pt-10 items-center gap-8'>
         <h1 className='headingStyle'>Want to get started?</h1>
         <div className='flex justify-center items-center gap-x-10'>
 
@@ -44,9 +84,9 @@ const page = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
 
-export default page
+export default Page

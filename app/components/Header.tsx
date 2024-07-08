@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React, { useContext } from 'react'
-import logo1 from '@/assets/logos/Chilada logo 1 3.svg'
-import logo2 from '@/assets/logos/Chilada logo 2 1.svg'
+import logo1 from '@/public/logos/Chilada logo 1 3.svg'
+import logo2 from '@/public/logos/Chilada logo 2 1.svg'
 import Link from 'next/link'
 import { StyleContext } from '@/lib/StyleContext'
 import { BsFacebook, BsInstagram, BsPhone, BsPinterest } from 'react-icons/bs'
@@ -13,7 +13,7 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <nav className={`bg-${theme.secondaryColor} border-gray-200 shadow shadow-black z-20 fixed w-full -mt-24`} >
+      <nav className={`bg-${theme.secondaryColor} border-gray-200 z-20 fixed w-full -mt-24 bg-opacity-50 backdrop-blur-md`} >
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link href="/" className="flex items-center">
             <Image
@@ -47,11 +47,11 @@ const Header: React.FC = () => {
             </svg>
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-            <ul className={`font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-${theme.secondaryColor} md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-${theme.secondaryColor}`}>
+            <ul className={`font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 m`}>
               <li>
                 <Link
                   href="/"
-                  className={`block py-2 pl-3 pr-4 text-white bg-blue-300 rounded md:bg-transparent md:text-blue-400 md:p-0`}
+                  className={`block py-2 pl-3 pr-4 text-white bg-blue-300 rounded md:bg-transparent md:p-0`}
                   aria-current="page"
                 >
                   Home
@@ -94,11 +94,11 @@ const Header: React.FC = () => {
         </div>
       </nav>
 
-      <div className='rounded-l-3xl shadow-lg shadow-black fixed right-0 top-1/2 transform -translate-y-1/2 z-50 bg-chiladaBlue-200 bg-opacity-70 w-20 h-80 flex flex-col items-center justify-center gap-y-7'>
-      <BsFacebook className="text-4xl text-white hover:scale-90 cursor-pointer" />
-      <BsInstagram className="text-4xl text-white hover:scale-90 cursor-pointer" />
-      <BsPhone className="text-4xl text-white hover:scale-90 cursor-pointer" />
-      <BsPinterest className="text-4xl text-white hover:scale-90 cursor-pointer" />
+      <div className={`rounded-r-3xl shadow shadow-black fixed left-0 top-1/2 transform -translate-y-1/2 z-50 bg-${theme.secondaryColor} bg-opacity-40 w-14 h-72 flex flex-col items-center justify-center gap-y-5 backdrop-blur-md`}>
+        <BsFacebook className="text-4xl text-white hover:scale-90 cursor-pointer" />
+        <BsInstagram className="text-4xl text-white hover:scale-90 cursor-pointer" />
+        <BsPhone className="text-4xl text-white hover:scale-90 cursor-pointer" />
+        <BsPinterest className="text-4xl text-white hover:scale-90 cursor-pointer" />
       </div>
     </>
 

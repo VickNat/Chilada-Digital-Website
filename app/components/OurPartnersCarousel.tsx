@@ -1,6 +1,6 @@
 import { Partner } from '@/lib/types';
 import React from 'react'
-import internship from '@/assets/images/internships 2.png'
+import internship from '@/public/images/internships 2.png'
 import Image from 'next/image';
 
 const OurPartnersCarousel: React.FC = () => {

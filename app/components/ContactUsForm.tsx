@@ -2,8 +2,8 @@ import React from 'react'
 
 const ContactUsForm: React.FC = () => {
   return (
-    <div className="w-10/12 -mt-16 mx-auto z-10 mb-10">
-      <form className="bg-white shadow-xl rounded-3xl px-44 pt-20 pb-8">
+    <div className="w-6/12 -mt-16 mx-auto z-10 mb-10">
+      <form className="bg-white shadow-xl rounded-3xl px-8 pt-20 pb-8">
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
             Name <span className='text-red-700'>*</span>
