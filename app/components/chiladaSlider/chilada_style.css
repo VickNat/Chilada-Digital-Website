@@ -1,0 +1,17 @@
+.swiper-button-prev {
+    color: white;
+    left: 130px;
+}
+
+.swiper-button-next {
+    color: white;
+    right: 130px;
+}
+
+@media (max-width: 768px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        left: 0px;
+        right: 0px;
+    }
+}

@@ -1,4 +1,5 @@
-import React from 'react'
+import { StyleContext } from '@/lib/StyleContext';
+import React, { useContext } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 interface OurPhilosophyCardProps {
@@ -11,15 +12,22 @@ const OurPhilosophyCard: React.FC<OurPhilosophyCardProps> = (props) => {
     triggerOnce: true,
     threshold: 0.1,
   })
+  const { theme, themeIndex, setThemeIndex } = useContext(StyleContext)
 
   return (
     <div
       ref={ref}
-      className={`bg-white md:w-80 md:h-80 bg-opacity-50 md:rounded-3xl relative mb-20 overflow-hidden shadow-lg shadow-black cursor-pointer hover:shadow-2xl hover:shadow-black transition-200 transition-all ease-in-out transform ${inView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+      className={`relative w-80 h-80 rounded-xl overflow-hidden shadow-lg transition-transform transform ${inView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} duration-300 ease-in-out`}
+      style={{ borderColor: theme.secondaryColor, borderWidth: '2px', borderStyle: 'solid' }}
     >
-      <p className='text-center font-normal text-xl py-4 px-6'>{item.description}</p>
-      <div className='px-2 h-16 flex justify-center items-center absolute bottom-0 w-full bg-white object-cover'>
-        <h2 className='uppercase text-xl text-center text-red-800 font-bold'>{item.title}</h2>
+      <div
+        className='absolute inset-0 bg-white bg-opacity-50 backdrop-blur-md rounded-xl p-6 flex flex-col justify-between'
+        style={{ borderColor: theme.secondaryColor }}
+      >
+        <p className='text-center font-light text-lg text-gray-800'>{item.description}</p>
+        <div className='mt-4'>
+          <h2 className='uppercase text-2xl text-center text-gray-900 font-semibold tracking-wide'>{item.title}</h2>
+        </div>
       </div>
     </div>
   )

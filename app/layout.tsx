@@ -84,12 +84,13 @@ export default function RootLayout({
     },
   ];
 
-  console.log(themes[themeIndex], themeIndex);
+  // console.log(themes[themeIndex], themeIndex);
+  // console.log(`bg-${themes[themeIndex].primaryColor}`)
 
   return (
     <StyleContext.Provider value={{ theme: themes[themeIndex], themeIndex, setThemeIndex }} >
       <html lang="en">
-        <body className={`bg-${themes[themeIndex].primaryColor}`} >
+        <body className={`bg-${themes[themeIndex].primaryColor}`}>
           <div className={`bg-${themes[themeIndex].primaryColor} relative transition-bg duration-10000`} >
             <div className="absolute inset-0">
               <Image src={internship} alt='Internship' className='h-full w-full object-cover mix-blend-overlay' />

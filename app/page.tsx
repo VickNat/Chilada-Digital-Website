@@ -3,7 +3,7 @@
 import { StyleContext } from "@/lib/StyleContext";
 import { useContext } from "react";
 import Header from "./components/Header";
-import ChiladaSlider from "./components/ChiladaSlider";
+import ChiladaSlider from "./components/chiladaSlider/ChiladaSlider";
 import OurPhilosophy from "./components/OurPhilosophy";
 import WhyChooseUs from "./components/WhyChooseUs";
 import FooterWhite from "./components/FooterWhite";
@@ -12,7 +12,7 @@ import Testimonial from "./components/Testimonial";
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center items-center gap-y-28 mt-24">
+    <div className="flex flex-col justify-center items-center gap-y-16 mt-24">
       <ChiladaSlider />
       <OurPhilosophy />
       <WhyChooseUs />

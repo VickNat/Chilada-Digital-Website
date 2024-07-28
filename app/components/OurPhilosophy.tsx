@@ -21,14 +21,14 @@ const OurPhilosophy: React.FC = () => {
   ]
 
   return (
-    <>
-      <h1 className='headingStyle'>our philosophy</h1>
-      <div className='bg-transparent flex justify-center items-center gap-x-36 '>
+    <div className='flex flex-col gap-y-10'>
+      <h1 className='headingStyle text-center'>our philosophy</h1>
+      <div className='bg-transparent flex flex-wrap justify-center items-center gap-10 lg:gap-x-36 '>
         {ourPhilosophy.map((item, index) => (
           <OurPhilosophyCard key={index} item={item} />
         ))}
       </div>
-    </>
+    </div>
   )
 }
 

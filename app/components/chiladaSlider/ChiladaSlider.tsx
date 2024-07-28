@@ -3,18 +3,35 @@ import { StyleContext } from "@/lib/StyleContext";
 import { useContext, useEffect, useRef, useState } from "react";
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
-import ChiladaSliderCard from "./ChiladaSliderCard";
+import ChiladaSliderCard from "../ChiladaSliderCard";
 import image1 from '@/public/images/1.svg'
 import image2 from '@/public/images/2.svg'
 import image3 from '@/public/images/3.svg'
 import image4 from '@/public/images/4.svg'
 import image5 from '@/public/images/5.svg'
 import logo1 from '@/public/logos/Chilada logo 1 3.svg'
+import './chilada_style.css';
 
 const ChiladaSlider: React.FC = () => {
   const swiperRef = useRef<any>();
 
   const { theme, themeIndex, setThemeIndex } = useContext(StyleContext)
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  // when the screen size changes i want to set issmallscreen to true if its in mobile view
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth < 768);
+    };
+
+    handleResize(); // Call the function initially to set the initial value
+
+    window.addEventListener('resize', handleResize); // Add event listener for resize
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Clean up the event listener on component unmount
+    };
+  }, []);
 
   const chiladaTexts = [
     {
@@ -66,12 +83,15 @@ const ChiladaSlider: React.FC = () => {
 
       pagination: {
         el: '.swiper-pagination',
+        clickable: true,
       },
 
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      
+      normalizeSlideIndex: true,
 
       scrollbar: {
         el: '.swiper-scrollbar',
@@ -101,8 +121,12 @@ const ChiladaSlider: React.FC = () => {
 
           <div className="swiper-pagination"></div>
 
-          <div className="swiper-button-prev"></div>
-          <div className="swiper-button-next"></div>
+          {!isSmallScreen ? (
+            <>
+              <div className="swiper-button-prev"></div>
+              <div className="swiper-button-next"></div>
+            </>
+          ) : null}
         </div>
       </div>
     </>

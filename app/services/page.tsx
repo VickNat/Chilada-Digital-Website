@@ -60,31 +60,13 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center min-h-screen my-20">
-        <div className="grid grid-cols-3 gap-16">
+      <div className="flex justify-center items-center my-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-16">
           {services.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>
       </div>
-
-      {/* <div className='h-[551px] bg-${theme.primaryColor} my-36 flex flex-col justify-start pt-10 items-center gap-8'>
-        <h1 className='headingStyle'>Want to get started?</h1>
-        <div className='flex justify-center items-center gap-x-10'>
-
-          <Image src={logo1} alt='Logo' className='' width={280} height={280} />
-
-          <div>
-            <h3 className='headingStyle text-3xl flex flex-col justify-center items-center'>Get in touch</h3>
-            <button
-              // type="button"
-              className="bg-gradient-to-r from-white to-gray-300 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 shadow-md shadow-black font-medium rounded-full text-sm px-8 py-2.5 text-center mr-2 mb-2 cursor-pointer hover:from-gray-300 hover:to-white text-chiladaBlue-200"
-            >
-              Contact Us
-            </button>
-          </div>
-        </div>
-      </div> */}
     </div>
   )
 }

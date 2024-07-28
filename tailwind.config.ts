@@ -15,7 +15,15 @@ const config: Config = {
         'bg-chiladaPurple-100',
         'bg-chiladaPurple-200',
         'bg-chiladaBrown-100',
-        'bg-chiladaBrown-200'
+        'bg-chiladaBrown-200',
+        'bg-chiladaGreen-100',
+        'bg-chiladaGreen-200',
+        'bg-chiladaYellow-100',
+        'bg-chiladaYellow-200',
+        'bg-chiladaRed-100',
+        'bg-chiladaRed-200',
+        'bg-chiladaOrange-100',
+        'bg-chiladaOrange-200',
       ],
     },
   },
@@ -38,10 +46,10 @@ const config: Config = {
       transitionProperty: {
         'bg': 'background-color',
       },
-      animation:{
+      animation: {
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
       },
-      keyframes:{
+      keyframes: {
         'infinite-scroll': {
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-1500px)' },
@@ -62,32 +70,32 @@ const config: Config = {
           '200': "#FFFFFF",
         },
         'chiladaBlue': {
-          '100': '#0A57A4',
-          '200': "#094E93",
+          '100': '#0A57AF',
+          '200': "#094E99",
         },
-        'chiladaPurple': {
-          '100': '#7057A5',
-          '200': '#4C2D8E'
+        "chiladaPurple": {
+          "100": "#6C3483", // Primary
+          "200": "#4A235A"  // Secondary
         },
-        'chiladaYellow': {
-          '100': '#CBC95B',
-          '200': '#BEBB32'
+        "chiladaYellow": {
+          "100": "#A89A3E", // Darker warm yellow
+          "200": "#8C7C2E"  // Rich, deep yellow
         },
-        'chiladaRed': {
-          '100': '#8E3F5D',
-          '200': '#720F34',
+        "chiladaRed": {
+          "100": "#A63D5B", // Slightly deeper primary
+          "200": "#6D0F29"  // Slightly deeper secondary
         },
-        'chiladaOrange': {
-          '100': '#E4AD52',
-          '200': '#DD9827',
+        "chiladaOrange": {
+          "100": "#D89B50", // Deep, rich orange
+          "200": "#B86D27"  // Darker, fruit-like orange
         },
-        'chiladaGreen': {
-          '100': '#68B571',
-          '200': '#42A34D',
+        "chiladaGreen": {
+          "100": "#2C6B2F", // Primary
+          "200": "#1B4F29"  // Secondary
         },
-        'chiladaBrown': {
-          '100': '#805951',
-          '200': '#602F26',
+        "chiladaBrown": {
+          "100": "#8D5A2D", // Warm, rich brown reminiscent of classic vintage tones
+          "200": "#6F3D22"  // Darker, deeper brown for a more classic and sophisticated look
         },
       },
     },

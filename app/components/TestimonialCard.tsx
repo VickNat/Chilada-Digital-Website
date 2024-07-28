@@ -18,7 +18,7 @@ const TestimonialCard:React.FC = () => {
         <Image src={internship} className='h-20 w-20 rounded-full' alt='image' />
         <h3 className='font-bold font-heading text-3xl'>Headline</h3>
       </div>
-      <p className='text-xl font-body font-regular text-left w-72'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quas.</p>
+      <p className='text-xl font-body font-regular text-left w-11/12'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, quas.</p>
     </div>
   )
 }
