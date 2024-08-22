@@ -14,6 +14,7 @@ export interface Theme {
   sliderImage: string
   primaryLogo: any
   secondaryLogo: any
+  landingImage: any
 }
 
 export interface ColorContextStyle {

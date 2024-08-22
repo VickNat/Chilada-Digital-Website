@@ -69,14 +69,6 @@ const config: Config = {
           '100': '#BFBFBF',
           '200': "#FFFFFF",
         },
-        'chiladaBlue': {
-          '100': '#0A57AF',
-          '200': "#094E99",
-        },
-        "chiladaPurple": {
-          "100": "#6C3483", // Primary
-          "200": "#4A235A"  // Secondary
-        },
         "chiladaYellow": {
           "100": "#A89A3E", // Darker warm yellow
           "200": "#8C7C2E"  // Rich, deep yellow
@@ -89,13 +81,44 @@ const config: Config = {
           "100": "#D89B50", // Deep, rich orange
           "200": "#B86D27"  // Darker, fruit-like orange
         },
-        "chiladaGreen": {
-          "100": "#2C6B2F", // Primary
-          "200": "#1B4F29"  // Secondary
-        },
         "chiladaBrown": {
           "100": "#8D5A2D", // Warm, rich brown reminiscent of classic vintage tones
           "200": "#6F3D22"  // Darker, deeper brown for a more classic and sophisticated look
+        },
+        "chiladaGray": {
+          "100": "#464646", // Lighter gray
+          "200": "#A9A9A9", // Darker gray
+          "300": "#FFFFFF"  // Text
+        },
+        "chiladaPurple": {
+          "100": "#7e77b2", // Primary
+          "200": "#B6AEDD",  // Secondary
+          "300": "#FFFFFF"  // Text
+        },
+        "chiladaBeige": {
+          "100": "#b0aa74", // Primary
+          "200": "#E3DCB4",  // Secondary
+          "300": "#2E2E2E"  // Text
+        },
+        "chiladaTeal": {
+          "100": "#7c958d", // Primary
+          "200": "#AFC4B9",  // Secondary
+          "300": "#FFFFFF"  // Text
+        },
+        "chiladaRose": {
+          "100": "#a17e8b", // Primary
+          "200": "#D1A5AE",  // Secondary
+          "300": "#FFFFFF"  // Text
+        },
+        "chiladaGreen": {
+          "100": "#8ba46f", // Primary
+          "200": "#C1D1A7",  // Secondary
+          "300": "#2E2E2E"  // Text
+        },
+        "chiladaBlue": {
+          "100": "#83a6bf", // Primary
+          "200": "#B7D1E2",  // Secondary
+          "300": "#FFFFFF"  // Text
         },
       },
     },

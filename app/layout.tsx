@@ -11,6 +11,13 @@ import logo2 from '@/public/logos/Chilada logo 2 1.svg'
 import logo3 from '@/public/logos/Chilada logo 2 2.svg'
 import { Theme } from '@/lib/types'
 import BackToTopButton from './components/BackToTopButton'
+import grayImage from '@/public/landingImages/11.jpg'
+import purpleImage from '@/public/landingImages/22.jpg'
+import beigeImage from '@/public/landingImages/33.jpg'
+import tealImage from '@/public/landingImages/44.jpg'
+import roseImage from '@/public/landingImages/55.jpg'
+import greenImage from '@/public/landingImages/66.jpg'
+import blueImage from '@/public/landingImages/77.jpg'
 
 
 // export const metadata: Metadata = {
@@ -28,11 +35,12 @@ export default function RootLayout({
   const themes: Theme[] = [
     {
       id: 1,
-      primaryColor: "chiladaBlue-100",
-      secondaryColor: "chiladaBlue-200",
+      primaryColor: "chiladaGray-100",
+      secondaryColor: "chiladaGray-200",
       sliderImage: "",
       primaryLogo: logo,
       secondaryLogo: logo3,
+      landingImage: grayImage,
     },
     {
       id: 2,
@@ -41,46 +49,52 @@ export default function RootLayout({
       sliderImage: "",
       primaryLogo: logo,
       secondaryLogo: logo3,
+      landingImage: purpleImage,
     },
     {
       id: 3,
-      primaryColor: "chiladaRed-100",
-      secondaryColor: "chiladaRed-200",
+      primaryColor: "chiladaBeige-100",
+      secondaryColor: "chiladaBeige-200",
       sliderImage: "",
       primaryLogo: logo,
       secondaryLogo: logo3,
+      landingImage: beigeImage,
     },
     {
       id: 4,
-      primaryColor: "chiladaGreen-100",
-      secondaryColor: "chiladaGreen-200",
+      primaryColor: "chiladaTeal-100",
+      secondaryColor: "chiladaTeal-200",
       sliderImage: "",
       primaryLogo: logo,
+      landingImage: tealImage,
       secondaryLogo: logo3,
     },
     {
       id: 5,
-      primaryColor: "chiladaBrown-100",
-      secondaryColor: "chiladaBrown-200",
+      primaryColor: "chiladaRose-100",
+      secondaryColor: "chiladaRose-200",
       sliderImage: "",
       primaryLogo: logo,
+      landingImage: roseImage,
       secondaryLogo: logo3,
     },
     {
       id: 6,
-      primaryColor: "chiladaYellow-100",
-      secondaryColor: "chiladaYellow-200",
+      primaryColor: "chiladaGreen-100",
+      secondaryColor: "chiladaGreen-200",
       sliderImage: "",
       primaryLogo: logo,
+      landingImage: greenImage,
       secondaryLogo: logo3,
     },
     {
       id: 7,
-      primaryColor: "chiladaOrange-100",
-      secondaryColor: "chiladaOrange-200",
+      primaryColor: "chiladaBlue-100",
+      secondaryColor: "chiladaBlue-200",
       sliderImage: "",
       primaryLogo: logo,
       secondaryLogo: logo3,
+      landingImage: blueImage,
     },
   ];
 
@@ -92,10 +106,10 @@ export default function RootLayout({
       <html lang="en">
         <body className={`bg-${themes[themeIndex].primaryColor}`}>
           <div className={`bg-${themes[themeIndex].primaryColor} relative transition-bg duration-10000`} >
-            <div className="absolute inset-0">
+            {/* <div className="absolute inset-0">
               <Image src={internship} alt='Internship' className='h-full w-full object-cover mix-blend-overlay' />
               <div className={`absolute inset-0 bg-${themes[themeIndex].primaryColor} opacity-90  transition-bg duration-10000`}></div>
-            </div>
+            </div> */}
             <div className='relative'>
               <Header />
               {children}
